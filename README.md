@@ -2,14 +2,17 @@
 Hands-on training on the EBVCube format for B-Cubed and Natura Connect partners
 
 ## Workshop structure
-- 16.10. erliest 10 o'clock
+- 14.10. at 11 o'clock
 - come 30min earlier for installation problems
-- 1.5 h, 20min modules x3 + 30 min questions
+- 1 h, 20min modules x 2 + 20 min questions
 - interactive R-markdown?
-1. exploring and visualization of a dataset -> Emma slides pptx
+- The first module will be taught on 07.14 after Henrique's talk
+1. exploring and visualization of a dataset -> Lina slides pptx (Lina presents the EBV Portal and metadata)
 	- EBV Data Portal -> show different hierarchies, show map, download (id 7?) (DOI, metadata)
-	- QGIS Plugin -> viusalize (access to GIS tools)
-	- show in metadata upload
+ 	- show in metadata upload
+ 	- QGIS Plugin -> viusalize (access to GIS tools) (By Emmanuel)
+	- show in Panoply? (By Lina)
+
 2. two datasets: one dataset from lina, one dataset from Henrique (BES-SIM) -> give them a describing text, make them map -> individual exercise (5min) -> Luise slides pptx + R-code
 	- someone wants to share? else we show (one by one)
 		* hierarchy? -> graph
@@ -23,7 +26,7 @@ Hands-on training on the EBVCube format for B-Cubed and Natura Connect partners
 3. Create an EBVCube netCDF ebv_create and ebv_add_data -> Lina slides pptx + R-code
 	- creation of species occurence cubes -> link to repository
 	- give them a json and some Tiffs -> creation
-	- show in Panoply?
+	
 	
 xx. what tools are there - one slide per tool
 	* EBV Data Portal
