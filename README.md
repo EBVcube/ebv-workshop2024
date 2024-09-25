@@ -1,5 +1,6 @@
 # ebv-workshop2024
 Hands-on training on the EBVCube format for B-Cubed and Natura Connect partners
+Agenda https://cloud.idiv.de/nextcloud/index.php/f/379298528
 
 ## Workshop structure
 - 14.10. at 11 o'clock
