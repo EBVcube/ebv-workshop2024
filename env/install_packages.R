@@ -2,9 +2,6 @@
 
 # Welcome! This script installs all the required packages for this session.
 
-# Install ebvcube from CRAN (not recommended at the moment)
-# install.packages("ebvcube")
-
 # Install latest development version of ebvcube from GitHub (recommended)
 install.packages("devtools")
 devtools::install_github("https://github.com/LuiseQuoss/ebvcube/tree/dev")
