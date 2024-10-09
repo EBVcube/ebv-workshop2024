@@ -1,5 +1,6 @@
 # load the ebvcube package
 library(ebvcube)
+library(stringr)
 
 #Documentation----
 # Remember to check the help-pages of the function using ?
@@ -56,4 +57,4 @@ terra::plot(data[[2]])
 
 # Clean up ----
 file.remove(path)
-file.remove(paste0(path, '/**.json'))
+file.remove(paste0(str_remove(path, '.nc'), '_metadata.json'))
