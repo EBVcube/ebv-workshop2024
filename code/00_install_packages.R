@@ -13,7 +13,7 @@ devtools::install_github("https://github.com/LuiseQuoss/ebvcube/tree/dev")
 # BiocManager::install(c("rhdf5", "HDF5Array", "DelayedArray"))
 
 # Install additional CRAN packages
-install.packages(c("readr", "terra", "ggplot2", "tidyverse"))
+install.packages(c("readr", "terra", "ggplot2", "tidyverse", "stringr"))
 
 # Installation complete message
 message("All required packages have been installed successfully.")
@@ -24,4 +24,6 @@ library(readr)
 library(terra)
 library(ggplot2)
 library(tidyverse)
+library(stringr)
+
 

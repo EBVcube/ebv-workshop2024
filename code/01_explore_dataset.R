@@ -11,7 +11,7 @@ downloads <- ebv_download()
 head(downloads)
 
 # Download the 'Global trends in biodiversity (BES-SIM PREDICTS)' dataset
-path <- ebv_download(id = '10.25829/bk5g87', 
+path <- ebv_download(id = '10.25829/bk5g87', #alternative value: downloads$id[18]
                      outputdir = '../data/') 
 
 # 2. Explore available datacubes ----
@@ -56,3 +56,4 @@ terra::plot(data[[2]])
 
 # Clean up ----
 file.remove(path)
+file.remove(paste0(path, '/**.json'))
