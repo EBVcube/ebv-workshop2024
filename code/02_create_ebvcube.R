@@ -1,4 +1,9 @@
 # Script to create EBVCubes from tif files
+# EBVCube Workshop 2024 - EBVCube: Enhancing Biodiversity Data Sharing
+# with Interoperable Geospatial Standards
+# Session 2: Hands-on training  on the `ebvcube` R package
+# Author: Lina M. Estupinan-Suarez
+# Institution: German Centre for Integrative Biodiversity Research
 
 # Load libraries
 library(ebvcube)
@@ -16,11 +21,9 @@ nc <- "./data/output/datacubes/nc/ebvcube_test.nc"
 
 # Plot data
 tifs <- c('entity_1.tif', 'entity_2.tif', 'entity_3.tif')
-# tif_paths <- file.path(pathin, tifs)
-# rin <- rast(tif_paths[1])
-rin <- rast(paste0(pathin, tifs[1]))
+tif_paths <- file.path("./data/input/tif", tifs)
+rin <- rast(tif_paths[1])
 plot(rin)
-
 
 # Defining the fillvalue - optional
 fv <- -3.4e+38
@@ -54,8 +57,6 @@ entity_names <- ebv_properties(nc, verbose=F)@general$entity_names
 # Check out the (still empty) datacubes that are available
 dc.new <- ebv_datacubepaths(nc, verbose=FALSE)
 print(dc.new)
-
-tif_paths <- file.path("./data/input/tif", tifs)
 
 # Add the data
 entity <- 1
