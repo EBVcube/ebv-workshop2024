@@ -1,16 +1,12 @@
-# install_packages.R
+# Install the packages for the hand-on session on 14th of October
 
-# Welcome! This script installs all the required packages for this session.
+# Install Bioconductor packages (required for ebvcube)
+if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+BiocManager::install(c("rhdf5", "HDF5Array", "DelayedArray"))
 
 # Install latest development version of ebvcube from GitHub (recommended)
 install.packages("devtools")
 devtools::install_github("https://github.com/LuiseQuoss/ebvcube/tree/dev")
-
-# In case you get an error for libraries: rhdf5, HDF5Array, or DelayedArray
-# Install Bioconductor packages (required for ebvcube)
-# Uncomment the following lines and run them if needed:
-# if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-# BiocManager::install(c("rhdf5", "HDF5Array", "DelayedArray"))
 
 # Install additional CRAN packages
 install.packages(c("readr", "terra", "ggplot2", "tidyverse", "stringr"))
@@ -26,4 +22,4 @@ library(ggplot2)
 library(tidyverse)
 library(stringr)
 
-
+# If anything did not work, come to the Zoom-call 30 mins earlier at 10:30
