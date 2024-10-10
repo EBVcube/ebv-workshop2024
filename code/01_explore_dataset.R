@@ -10,6 +10,12 @@ library(ebvcube)
 library(stringr)
 library(terra)
 
+# Check if working directory point to this code-folder
+getwd()
+# If not, run the following line of code
+# This only runs if you are using RStudio, else use setwd("your/path/to/ebv-workshop2024-main/code")
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+
 # Documentation----
 # Remember to check the help-pages of the function, e.g. using ?
 ?ebv_download
@@ -31,16 +37,12 @@ cubes <- ebv_datacubepaths(filepath = path)
 print(cubes)
 
 # 3. Explore the metadata ----
-prop <- ebv_properties(filepath = path)
-
-# Include specific info for one metric and scenario, e.g. of the relative species change of scenario 1 (SSP1)
-prop_s <- ebv_properties(filepath = path,
+# Properties for one metric and scenario: the relative species change of scenario 1 (SSP1)
+prop <- ebv_properties(filepath = path,
                          metric = 2,
                          scenario = 1)
 
 # How is the relative species change calculated (metric 2)?
-prop_s@metric
-#if you don't define the metric in the properties:
 prop@metric
 
 # What timesteps (dates) does the dataset cover?
