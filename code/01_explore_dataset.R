@@ -1,6 +1,14 @@
+# Script to explore EBVCubes
+# EBVCube Workshop 2024 - EBVCube: Enhancing Biodiversity Data Sharing
+# with Interoperable Geospatial Standards
+# Session 2: Hands-on training  on the `ebvcube` R package
+# Author: Luise Quoß
+# Institution: German Centre for Integrative Biodiversity Research
+
 # load the ebvcube and stringr package
 library(ebvcube)
 library(stringr)
+library(terra)
 
 # Documentation----
 # Remember to check the help-pages of the function, e.g. using ?
@@ -12,8 +20,8 @@ downloads <- ebv_download()
 head(downloads)
 
 # Download the 'Global trends in biodiversity (BES-SIM PREDICTS)' dataset using the DOI
-path <- ebv_download(id = '10.25829/bk5g87', #alternative: downloads$id[18]
-                     outputdir = '../data/') 
+path <- ebv_download(id = '10.25829/bk5g87', #alternative value: downloads$id[18]
+                     outputdir = '../data/') #if error: remove one dot and try again
 
 # 2. Explore available datacubes ----
 # Get info about cubes including the hierarchy
@@ -53,10 +61,10 @@ data <- ebv_read(filepath = path,
                  timestep = 1:3,
                  entity = 'Alltaxa', #alternative value: 1
                  type = 'r' #change this value to 'a' to get an array
-                 ) 
+                 )
 
 # Quickly check the data visually using the terra plot function
-terra::plot(data[[2]])
+plot(data[[2]])
 
 # Clean up ----
 file.remove(path)
