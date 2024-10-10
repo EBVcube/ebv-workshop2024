@@ -13,7 +13,7 @@ In case you don't have *R* installed yet, follow these steps (before running the
 
 ## Agenda
 
-Installation help: 10:30 o'clock
+Installation help: 10:30 o'clock  </br>
 Workshop start: 11 o'clock
 
 1. Recap of EBVCube format by Emmanuel (5 min)
