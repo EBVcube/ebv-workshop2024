@@ -11,18 +11,18 @@ library(terra)
 
 # 1. Define paths ----
 # Path to EBV metadata as JSON
-json <- "./metadata/json/test.json"
+json <- "./metadata/json/test.json" #if error: add one dot and try again
 # json_data <- fromJSON(file=json) # in case you want to read the jsonfile
 
 # Path to Tiffs
-pathin <- "./data/input/tif/"
+pathin <- "./data/input/tif/" #if error: add one dot and try again
 
 # Path to the EBVCube output
-nc <- "./data/output/datacubes/nc/ebvcube_test.nc"
+nc <- "./data/output/datacubes/nc/ebvcube_test.nc" #if error: add one dot and try again
 
 # 2. Plot data ----
 tifs <- c('entity_1.tif', 'entity_2.tif', 'entity_3.tif')
-tif_paths <- file.path("./data/input/tif", tifs)
+tif_paths <- file.path("./data/input/tif", tifs) #if error: add one dot and try again
 rin <- rast(tif_paths[1])
 plot(rin)
 
