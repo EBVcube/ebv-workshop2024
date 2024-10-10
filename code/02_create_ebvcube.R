@@ -5,10 +5,21 @@
 # Author: Lina M. Estupinan-Suarez
 # Institution: German Centre for Integrative Biodiversity Research
 
+
+# Activate to clean your envirionment
+rm(list=ls())
+gc()
+
 # Load packages
 library(ebvcube)
 library(terra)
 library(jsonlite)
+
+# Check if working directory point to this code-folder
+getwd()
+# If not, run the following line of code
+# This only runs if you are using RStudio, else use setwd("your/path/to/ebv-workshop2024-main/code")
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 # 1. Define paths ----
 # Path to EBV metadata as JSON
