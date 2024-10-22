@@ -18,8 +18,6 @@ message("All required packages have been installed successfully.")
 library(ebvcube)
 library(readr)
 library(terra)
-library(ggplot2)
 library(tidyverse)
-library(stringr)
 
 # If anything did not work, come to the Zoom-call 30 mins earlier at 10:30
