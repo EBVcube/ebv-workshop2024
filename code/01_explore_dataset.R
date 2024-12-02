@@ -26,7 +26,7 @@ downloads <- ebv_download()
 head(downloads)
 
 # Download the 'Global trends in biodiversity (BES-SIM PREDICTS)' dataset using the DOI
-path <- ebv_download(id = 82, #'10.25829/bk5g87', #alternative value: downloads$id[18]
+path <- ebv_download(id = '10.25829/bk5g87', #alternative values: 82 or downloads$id[18]
                      outputdir = '../data/') #if error: remove one dot and try again
 
 # 2. Explore available datacubes ----
