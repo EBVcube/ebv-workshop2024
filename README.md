@@ -3,7 +3,7 @@ Hands-on training on the EBVCube format for B-Cubed and Natura Connect partners.
 
 ## Agenda
 
-### Session 1 - Overview of the EBVCube Concept and EBV Data Portal -  7.10.2024 - 11 o'clock
+### Session 1 - Overview of the EBVCube Concept and EBV Data Portal -  7.10.2024
 Workshop start: 11 o'clock
 
 1. Overview of the EBV Cube Concept and EBV Data Portal
@@ -12,7 +12,7 @@ Workshop start: 11 o'clock
 4. Navigating the EBV Data Portal (data sets, DOIs) and metadata creation on the Portal
 5. Data visualisation in Panoply
 
-### Session 2 - Hands-on training  on the `ebvcube` R package -  14.10.2024 - 11 o'clock
+### Session 2 - Hands-on training  on the `ebvcube` R package -  14.10.2024
 Installation help: 10:30 o'clock  </br>
 Workshop start: 11 o'clock
 
