@@ -23,18 +23,18 @@ setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 # 1. Define paths ----
 # Path to EBV metadata as JSON
-json <- "./data/input/json/test.json" #if error: add one dot and try again
+json <- "../data/input/json/test.json" #if error: add one dot and try again
 json_data <- fromJSON(txt=json) # in case you want to read the jsonfile
 
 # Path to Tiffs
-pathin <- "./data/input/tif/" #if error: add one dot and try again
+pathin <- "../data/input/tif/" #if error: add one dot and try again
 
 # Path to the EBVCube output
-nc <- "./data/output/ebvcube_test.nc" #if error: add one dot and try again
+nc <- "../data/output/ebvcube_test.nc" #if error: add one dot and try again
 
 # 2. Plot data ----
 tifs <- c('entity_1.tif', 'entity_2.tif', 'entity_3.tif')
-tif_paths <- file.path("./data/input/tif", tifs) #if error: add one dot and try again
+tif_paths <- file.path("../data/input/tif", tifs) #if error: add one dot and try again
 rin <- rast(tif_paths[1])
 plot(rin)
 
@@ -98,7 +98,7 @@ mycube <- ebv_read(filepath = nc,
                   timestep = c(1,2),
                   type='r',
                    )
-
+terra::plot(mycube)
 
 # 5. Do by yourselves: ----
 # Use the tif files provide in the 'exercise' folder. This is subset of the dataset ID 82.
