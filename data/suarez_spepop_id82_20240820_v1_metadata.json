@@ -1,0 +1,111 @@
+{
+    "code": 200,
+    "message": "List of dataset(s).",
+    "data": [
+        {
+            "id": "82",
+            "naming_authority": "The German Centre for Integrative Biodiversity Research (iDiv) Halle-Jena-Leipzig",
+            "title": "Occurrence Metrics for the Birds Directive Annex I Species in EU27: A 10 km prototype using GBIF occurrence cubes",
+            "date_created": "2024-08-15",
+            "date_issued": "2024-08-22",
+            "summary": "This dataset includes GBIF occurrences of 193 species listed in Annex I of the Birds Directive, subject to special conservation measures. The scientific names, updated by the EEA, were cross-referenced with the GBIF backbone taxonomy, yielding accepted GBIF scientific names and corresponding acceptedUsageKeys for these species. Using these names and the EEA spatial grid at a 10 km resolution, we generated the occurrence cube via the GBIF API in R (DOI: https:\/\/doi.org\/10.15468\/dl.43ydtq). A total of 168 species met the criteria for inclusion in the cube. The following preliminary occurrence metrics were calculated for each grid cell in the cube:<br \/>  \u2022\tTotal number of occurrences<br \/>  \u2022\tEarliest month with occurrences across all years<br \/>   \u2022\tLatest month with occurrences across all years<br \/>  \u2022\tMonth with the highest total number of occurrences across all years<br \/>    \u2022\tMonth with the second-highest total number of occurrences across all years<br \/>  \u2022\tMonth with the third-highest total number of occurrences across all years.<br \/><br \/> This dataset was developed by the Biodiversity Building Blocks for Policy (B3) project and was funded by the European Union\u2019s Horizon Europe Research and Innovation Programme (ID No 101059592).",
+            "references": [
+                "10.15468\/dl.43ydtq"
+            ],
+            "source": "These are the general steps to calculate the metrics of species listed in the Annex I of the Birds Directive:<br\/>1. The scientific name of species in the Annex I was matched against the GBIF backbone taxonomy to obtain the accepted scientific name in GBIF and the corresponding acceptedSpeciesKey.<br\/>2. A JSON query was prepared for the corresponding species. The acceptedSpeciesKey was used as speciesKey for all records available until 2024 and with a coordinate uncertainty of 10000m. The complete query specifications is available at https:\/\/doi.org\/10.15468\/dl.43ydtq.<br\/>3. Using the Species occurrence cubes software developed by B3 and GBIF [1], we created species occurrence cubes in a CSV format matching the EEA grid at 10 Km.<br\/>4. We loaded the CSV occurrence cubes using the b3gbi library in R, and calculated the following metrics:<br\/>- Total number of occurrences<br\/>- Earliest month with occurrences across all years<br\/>- Latest month with occurrences across all years<br\/>- Month with the highest total number of occurrences across all years<br\/>- Month with the second-highest total number of occurrences across all years<br\/>- Month with the third-highest total number of occurrences across all years<br\/>5. After rasterization of the metrics, data was converted to the EBVCube format.<br\/><br\/>All scripts are available at GitHub https:\/\/github.com\/EBVcube\/B-Cubed_data_mobilization<br\/>[1] https:\/\/techdocs.gbif.org\/en\/data-use\/data-cubes",
+            "coverage_content_type": "referenceInformation,coordinate",
+            "project": "Biodiversity Building Blocks for Policy (B3)",
+            "project_url": [
+                "https:\/\/b-cubed.eu\/"
+            ],
+            "creator": {
+                "creator_name": "Lina Estupinan-Suarez",
+                "creator_email": "lina.estupinans@idiv.de",
+                "creator_institution": "German Centre for Integrative Biodiversity Research (iDiv)",
+                "creator_country": "Germany"
+            },
+            "contributor_name": [
+                "Miguel Fernandez",
+                "Emmanuel Oceguera",
+                "Luise Quoss"
+            ],
+            "license": "https:\/\/creativecommons.org\/licenses\/by\/4.0",
+            "publisher": {
+                "publisher_name": "Lina Estupinan Suarez",
+                "publisher_email": "lina.estupinans@idiv.de",
+                "publisher_institution": "German Centre for Integrative Biodiversity Research (iDiv)",
+                "publisher_country": "Germany"
+            },
+            "ebv": {
+                "ebv_class": "Species populations",
+                "ebv_name": "Other"
+            },
+            "ebv_entity": {
+                "ebv_entity_type": "Species",
+                "ebv_entity_scope": "Species listed in Annex I of the Birds Directive: 168 from 193 species due to subspecies listed or to data availability. See the comments section for more details.",
+                "ebv_entity_classification_name": "GBIF",
+                "ebv_entity_classification_url": "N\/A"
+            },
+            "ebv_metric": {
+                "ebv_metric_1": {
+                    ":standard_name": "Total number of species occurrences",
+                    ":long_name": "Total number of occurrences in GBIF per species per pixel, up to 2023",
+                    ":units": "Number of occurrences"
+                },
+                "ebv_metric_2": {
+                    ":standard_name": " Earliest month with species occurrences",
+                    ":long_name": "Earliest month with occurrences across all years",
+                    ":units": "Month"
+                },
+                "ebv_metric_3": {
+                    ":standard_name": "Latest month with species occurrences",
+                    ":long_name": "Latest month with occurrences across all years",
+                    ":units": "Month"
+                },
+                "ebv_metric_4": {
+                    ":standard_name": "Month with highest occurrence number",
+                    ":long_name": "Month with the highest total number of occurrences across all years",
+                    ":units": "Month"
+                },
+                "ebv_metric_5": {
+                    ":standard_name": "Month with second highest occurrences number",
+                    ":long_name": "Month with the second-highest total number of occurrences across all years",
+                    ":units": "Month"
+                },
+                "ebv_metric_6": {
+                    ":standard_name": "Month with third highest occurrences number",
+                    ":long_name": "Month with the third-highest total number of occurrences across all years",
+                    ":units": "Month"
+                }
+            },
+            "ebv_scenario": "N\/A",
+            "ebv_geospatial": {
+                "ebv_geospatial_scope": "Continental\/Regional",
+                "ebv_geospatial_description": "European Union (EU27 grid at 10 Km)"
+            },
+            "geospatial_lat_resolution": "10000 meter",
+            "geospatial_lon_resolution": "10000 meter",
+            "geospatial_bounds_crs": "EPSG:3035",
+            "geospatial_lat_min": "700000.0",
+            "geospatial_lon_min": "0",
+            "geospatial_lat_max": "7500000.0",
+            "geospatial_lon_max": "8400000.0",
+            "time_coverage": {
+                "time_coverage_resolution": "P0000-00-00",
+                "time_coverage_start": "1670-01-01",
+                "time_coverage_end": "2023-12-31"
+            },
+            "ebv_domain": "Terrestrial,Marine,Freshwater",
+            "comment": "From 193 species listed in the Annex I of the Birds Directive, we found data for 168 species through the species occurrence cubes generation. The 25 remaining species, using the GBIF Backbone Taxonomy, are:<br\/>  - Subspecies that are not identified by the speciesKey in the JSON query (20 species; Accipiter gentilis, Accipiter nisus, Anser albifrons, Calidris alpina, Certhia brachydactyla, Columba palumbus, Dendrocopos major, Dendrocopos major, Ardea alba, Fringilla coelebs, Gelochelidon nilotica, Lagopus muta, Lagopus muta, Periparus ater, Perdix perdix, Perdix perdix, Phalacrocorax aristotelis, Lyrurus tetrix, Troglodytes troglodytes, Uria aalge).   - Species from the Canary Islands (4 species; Columba bollii, Columba junoniae, Fringilla teydea, Saxicola dacotiae) or the Azores (1 species; Pyrrhula murina).<br\/><br\/>25 species were considered SYNONYMS by the GBIF Backbone Taxonomy, so we used the acceptedUsageKey that corresponds to the ACCEPTED scientific name by GBIF. Below the list of scientific names by the GBIF Backbone Taxonomy and in square brackets the name by the Birds Directive:<br\/>- Bonasa bonasia (Linnaeus, 1758) [Bonasa bonasia]<br\/>- Charadrius morinellus morinellus [Charadrius morinellus (Eudromias morinellus)]<br\/>- Cygnus bewickii Yarrell, 1830 [Cygnus bewickii (Cygnus columbianus bewickii)]<br\/>- Dendrocopos medius (Linnaeus, 1758) [Dendrocopos medius]<br\/>- Egretta alba alba [Egretta alba (Ardea alba)]<br\/>- Hieraaetus fasciatus (Vieillot, 1822) [Hieraaetus fasciatus]<br\/>- Hoplopterus spinosus Linnaeus, 1758 [Hoplopterus spinosus]<br\/>- Lagopus mutus helveticus [Lagopus mutus helveticus]<br\/>- Lagopus mutus pyrenaicus Hartert, 1921 [Lagopus mutus pyrenaicus]<br\/>- Larus audouinii Payraudeau, 1826 [Larus audouinii]<br\/>- Larus genei Br\u00e8me, 1839 [Larus genei]<br\/>- Larus melanocephalus Temminck, 1820 [Larus melanocephalus]<br\/>- Larus minutus Pallas, 1776 [Larus minutus]<br\/>- Mergus albellus albellus [Mergus albellus (Mergellus albellus)]<br\/>- Nyctea scandiaca (Linnaeus, 1758) [Nyctea scandiaca]<br\/>- Parus ater cypriotes Dresser, 1888 [Parus ater cypriotes]<br\/>- Phalacrocorax pygmeus (Pallas, 1773) [Phalacrocorax pygmeus]<br\/>- Philomachus pugnax (Linnaeus, 1758) [Philomachus pugnax]<br\/>- Puffinus puffinus mauretanicus Lowe, 1921 [Puffinus puffinus mauretanicus (Puffinus mauretanicus)]<br\/>- Sterna albifrons Pallas, 1764 [Sterna albifrons]<br\/>- Sterna caspia Pallas, 1770 [Sterna caspia]<br\/>- Sterna sandvicensis Latham, 1787 [Sterna sandvicensis]<br\/>- Sylvia rueppelli Temminck, 1823 [Sylvia rueppelli]<br\/>- Tetrao tetrix tetrix [Tetrao tetrix tetrix]<br\/>- Uria aalge ibericus Bernis, 1948 [Uria aalge ibericus]<br\/><br\/>Note: We manually changed the acceptedUsageKey of two species due to inconsistencies with the match tool.  The replaced acceptedUsageKey are:<br\/>- Cygnus columbianus (Ord, 1815) from 6178421(old) to 2498338 (new)<br\/>- Sternula albifrons (Pallas, 1764) from 7192406 (old) to 5789279 (new)",
+            "dataset": {
+                "pathname": "\/82\/public\/suarez_spepop_id82_20240820_v1.nc",
+                "download": "portal.geobon.org\/data\/upload\/82\/public\/suarez_spepop_id82_20240820_v1.nc",
+                "metadata_json": "portal.geobon.org\/data\/upload\/82\/public\/metadata_v1.json",
+                "metadata_xml": "portal.geobon.org\/data\/upload\/82\/public\/metadata_v1.xml"
+            },
+            "file": {
+                "download": "portal.geobon.org\/img\/82\/58750.jpg"
+            }
+        }
+    ]
+}
