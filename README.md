@@ -21,7 +21,7 @@ Workshop start: 11 o'clock
 3. Module 2: Create an EBVCube netCDF with R (20 min)
 
 ## Installation
-**Please do this before the workshop starts**
+**Please do this before the workshop starts**  
 Use the 00_install_packages.R script to install all *packages* before the session. If you had problems come 30 min earlier to the session on 14th of October. We will help you :)
 
 In case you don't have *R* installed yet, follow these steps (before running the script above):
