@@ -17,8 +17,8 @@ Installation help: 10:30 o'clock  </br>
 Workshop start: 11 o'clock
 
 1. Recap of EBVCube format by Emmanuel (5 min)
-2. Module 1: Explore an EBVCube netCDF with R by Luise ( 20 min)
-3. Module 2: Create an EBVCube netCDF with R by Lina (20 min)
+2. Module 1: Explore an EBVCube netCDF with R ( 20 min)
+3. Module 2: Create an EBVCube netCDF with R (20 min)
 
 ## Installation
 **Please do this before the workshop starts**
